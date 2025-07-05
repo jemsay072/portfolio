@@ -1,9 +1,10 @@
 import React from 'react';
-import { workData } from '../model/info';
+import { WorkBadge } from './WorkBadge';
 import { ArrowRight } from 'lucide-react';
 import { motion } from "motion/react"
 
-const Work = ({isDarkMode}) => {
+
+const Work = ({isDarkMode, data}) => {
   return (
     <motion.section
         initial={{opacity: 0}}
@@ -34,19 +35,28 @@ const Work = ({isDarkMode}) => {
                 whileInView={{opacity: 1}}
                 transition={{ duration: 0.9, delay: 0.6 }}
                 className='grid grid-cols-auto md:grid-cols-2 lg:grid-cols-4  my-10 gap-5'>
-                {workData.map(({title, desc, img, link}, ind) => (
+                {data.map(({title, desc, img, link, status, tech}, ind) => (
                     <div key={ind} 
                         className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group'
                         style={{backgroundImage: `url(${img.src})`}}>
-                        <div className={`flex flex-col absolute invisible group-hover:visible group-active:visible w-full h-full text-center justify-center items-center p-6 rounded-lg bg-sky-200 gap-4`}>
-                            <h3 className='text-2xl font-semibold text-gray-700'>{title}</h3>
-                            <p className='text-gray-400 text-sm'>{desc}</p>
-                            <a href={link} target='_blank' rel="noopener noreferrer" className='text-blue-500 border py-1 px-8 rounded-full  hover:bg-sky-500 hover:border-sky-500 hover:text-white duration-100'>View Project</a>
-                        </div>
+                        {status === 'active' ? (
+                            <div className={`flex flex-col absolute invisible group-hover:visible group-active:visible w-full h-full text-center justify-center items-center p-6 rounded-lg bg-sky-200 gap-4`}>
+                                <h3 className='text-2xl font-semibold text-gray-700'>{title}</h3>
+                                <p className='text-gray-400 text-sm'>{desc}</p>
+                                <div className='flex flex-wrap justify-center mt-2'>
+                                    <WorkBadge data={tech}/>
+                                </div>
+                                <a href={link} target='_blank' rel="noopener noreferrer" className='text-blue-500 border py-1 px-8 rounded-full  hover:bg-sky-500 hover:border-sky-500 hover:text-white duration-100'>View Project</a>
+                            </div>
+                        ) : (
+                            <div className='flex flex-col absolute w-full h-full text-center justify-center items-center p-10 rounded-lg bg-gray-600 opacity-70'>
+                                <span className='border rounded-lg p-1 transform rotate-3 uppercase text-2xl text-red-300'>Coming soon</span>
+                            </div>
+                        )}
                     </div>
                 ))}
             </motion.div>
-            <a href="#" className={`w-max flex items-center justify-center gap-2 border-[0.5px] rounded-full py-3 px-10 mx-auto my-20 hover:border-gray-300 duration-500 ${isDarkMode? 'border-gray-700 text-gray-700 hover:bg-gray-300' : 'dark:text-stone-50 dark:border-stone-50 dark:hover:text-gray-300'}`}>
+            <a href="#" className={`hidden w-max items-center justify-center gap-2 border-[0.5px] rounded-full py-3 px-10 mx-auto my-20 hover:border-gray-300 duration-500 ${isDarkMode? 'border-gray-700 text-gray-700 hover:bg-gray-300' : 'dark:text-stone-50 dark:border-stone-50 dark:hover:text-gray-300'}`}>
                 Show more <ArrowRight />
             </a>
         </div>

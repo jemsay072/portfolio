@@ -4,7 +4,9 @@ import user from "@/assets/images/jem.jpg";
 import { infoList } from '../model/info';
 import { motion } from "motion/react"
 
-const About = ({isDarkMode}) => {
+import PropTypes from 'prop-types'
+
+const About = ({isDarkMode, data}) => {
   return (
     <motion.section 
         initial={{opacity: 0}}
@@ -45,15 +47,14 @@ const About = ({isDarkMode}) => {
                     whileInView={{opacity: 1}}
                     transition={{ duration: 0.6, delay: 0.8 }}
                     className='flex-1 '>
-                    {/* <p>Solution-driven Web Developer adept at contributing to the highly collaborative work environment, finding solutions, and determining customer satisfaction. Proven experience developing consumer-focused websites using HTML, CSS, PHP, and JavaScript over 10 years, meeting the highest standards for web design, user experience, best practices, and speed. Designed and developed web applications across multiple APIs, third-party integrations, and databases.</p> */}
-                    <p className={`mb-10 mx-w-2xl ${isDarkMode ? '' : 'dark:text-white'}`}>With over a decade of hands-on experience in web development, I've had the opportunity to work with top-tier organizations, helping them grow through elegant, efficient, and user-focused web solutions. I bring both technical expertise and a strategic mindset to every project.</p>
+                    <p className={`mb-10 mx-w-2xl ${isDarkMode ? '' : 'dark:text-white'}`}>Experienced Web Developer with 12+ years of building high-performance, user-focused websites and applications. Skilled in HTML, CSS, JavaScript, ReactJS, PHP, Laravel, Wordpress and Next.js. Adept at delivering clean, efficient solutions, integrating APIs and databases, and ensuring top-tier UX, speed, and functionality.</p>
                     <motion.ul 
                         initial={{opacity: 0}}
                         whileInView={{opacity: 1}}
                         transition={{ duration: 0.8, delay: 0.1 }}
-                        className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'
+                        className='grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl'
                     >
-                       {infoList.map(({icon, title, desc}, ind) => (
+                       {data.map(({icon, title, desc}, ind) => (
                             <motion.li
                                 whileinView={{scale:1.05}}
                                 key={ind} 
@@ -69,6 +70,14 @@ const About = ({isDarkMode}) => {
         </div>
     </motion.section>
   )
+}
+
+About.proptypes = {
+    data:PropTypes.shape({
+        desc: PropTypes.string.isRequired,
+        icon: PropTypes.arrayOf(PropTypes.string).isRequired,
+        title: PropTypes.string.isRequired
+    }).isRequired
 }
 
 export default About

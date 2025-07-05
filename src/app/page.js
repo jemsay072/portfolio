@@ -7,6 +7,9 @@ import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
+import infoList from './model/info'
+
+
 export default function Home() {
 
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -32,10 +35,10 @@ export default function Home() {
 
   return (
     <main>
-      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <Hero isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <About isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <Work isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+      <Hero isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} data={infoList?.Hero} />
+      <About isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} data={infoList?.infoList} />
+      <Work isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} data={infoList?.workData} />
       <Contact isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Footer isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
     </main>

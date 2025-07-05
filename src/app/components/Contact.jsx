@@ -50,10 +50,9 @@ const Contact = ({isDarkMode}) => {
                     initial={{scale: 0}}
                     whileInView={{ scale: 1}}
                     transition={{ delay: 0.5 }}
-                    transition
                     href="https://www.linkedin.com/in/jemsay07/"
                     target="_blank" rel="noopener noreferrer" 
-                    className='flex justify-center gap-1 text-blue-500 rounded-full p-2 border border-2 border-blue-500 hover:bg-blue-500 hover:text-white duration-500'
+                    className='flex justify-center gap-1 text-blue-500 rounded-full p-2 border-2 border-blue-500 hover:bg-blue-500 hover:text-white duration-500'
                 >
                     <LinkedinIcon />
                 </motion.a>
@@ -62,7 +61,7 @@ const Contact = ({isDarkMode}) => {
                     whileInView={{ scale: 1}}
                     transition={{ delay: 0.6 }}
                     href="https://github.com/jemsay07" 
-                    className={`flex justify-center gap-1 border border-2 rounded-full p-2 ${isDarkMode? 'text-stone-800 border-stone-800 hover:bg-stone-800 hover:text-white' : 'dark:text-stone-50 dark:border-stone-50 dark:hover:bg-white dark:hover:text-stone-800'} duration-500`}
+                    className={`flex justify-center gap-1 border-2 rounded-full p-2 ${isDarkMode? 'text-stone-800 border-stone-800 hover:bg-stone-800 hover:text-white' : 'dark:text-stone-50 dark:border-stone-50 dark:hover:bg-white dark:hover:text-stone-800'} duration-500`}
                     target='_blank' rel="noopener noreferrer"
                 >
                     <GithubIcon />
@@ -72,7 +71,7 @@ const Contact = ({isDarkMode}) => {
                     whileInView={{ scale: 1}}
                     transition={{ delay: 0.7 }}
                     href="mailto:jem07.say@gmail.com" >
-                    <button className='flex justify-center gap-1 text-orange-500 rounded-full p-2 border border-2 border-orange-500 hover:bg-orange-600 hover:text-white duration-500 cursor-pointer'>
+                    <button className='flex justify-center gap-1 text-orange-500 rounded-full p-2 border-2 border-orange-500 hover:bg-orange-600 hover:text-white duration-500 cursor-pointer'>
                         <Mail />
                     </button>
                 </motion.a>

@@ -13,8 +13,10 @@
     "lucide-react": "^0.511.0",
     "motion": "^12.12.1",
     "next": "15.3.2",
+    "prop-types": "^15.8.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.6.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
