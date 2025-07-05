@@ -1,12 +1,13 @@
 import Image from 'next/image'
 import React, { useState, useEffect } from 'react';
-import logo from "@/assets/images/logo-light.png";
 import { AlignRight, Eclipse, HandMetal, Sun, X } from 'lucide-react';
 
-const Navbar = ({ isDarkMode, setIsDarkMode }) => {
+const Navbar = ({ isDarkMode, setIsDarkMode, data }) => {
   const [isScroll, setIsScroll] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isActive, setIsActive] = useState('home');
+
+  const logo = data?.src.src || { }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,6 +36,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               width={145}
               height={70}
               className='w-28 cursor-pointer mr-14'
+              priority={true}
             />
           </a>
           <ul className='hidden md:flex items-center gap-6 lg:gap-8 px-12 py-3'>

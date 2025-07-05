@@ -1,8 +1,16 @@
 import { BriefcaseBusiness, CodeXml, GraduationCap } from "lucide-react";
+import pic from "@/assets/images/jem.jpg";
 import profile from "@/assets/images/profile-w.jpg";
 import projuno from "@/assets/images/projUno.png";
 import projdos from "@/assets/images/projDos.png";
+import logoImg from "@/assets/images/logo-light.png";
 
+const logo = {
+    src: logoImg,
+    alt: 'Jemson Sayre Logo',
+    width: 145,
+    height: 70
+}
 
 const Hero = {
     name: "Jemson A. Sayre",
@@ -67,14 +75,14 @@ const workData = [
     }
 ]
 
-const projData = [
-    {
-        icon: '',
-        title: 'Web Design',
-        desc: '',
-        link: ''
-    }
-]
+// const projData = [
+//     {
+//         icon: '',
+//         title: 'Web Design',
+//         desc: '',
+//         link: ''
+//     }
+// ]
 
 const infoList = [
     {
@@ -94,10 +102,20 @@ const infoList = [
     },
 ]
 
-const toolsData = [
-    {
-        icons: ''
-    }
-]
+// const toolsData = [
+//     {
+//         icons: ''
+//     }
+// ]
 
-export default {Hero, workData, projData, infoList, toolsData}
+const combinedAbout = {
+    desc: 'Experienced Web Developer with 12+ years of building high-performance, user-focused websites and applications. Skilled in HTML, CSS, JavaScript, ReactJS, PHP, Laravel, Wordpress and Next.js. Adept at delivering clean, efficient solutions, integrating APIs and databases, and ensuring top-tier UX, speed, and functionality.',
+    src: pic,
+    alt: 'jemson sayre',
+    width: 200,
+    height: 200,
+    info: infoList, 
+};
+
+const info = {logo, Hero, workData, infoList, combinedAbout};
+export default info;

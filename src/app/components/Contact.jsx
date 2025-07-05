@@ -70,7 +70,7 @@ const Contact = ({isDarkMode}) => {
                     initial={{scale: 0}}
                     whileInView={{ scale: 1}}
                     transition={{ delay: 0.7 }}
-                    href="mailto:jem07.say@gmail.com" >
+                    href="mailto:support@jemsonsayre.com" >
                     <button className='flex justify-center gap-1 text-orange-500 rounded-full p-2 border-2 border-orange-500 hover:bg-orange-600 hover:text-white duration-500 cursor-pointer'>
                         <Mail />
                     </button>

@@ -14,6 +14,11 @@ const poppins = Poppins({
 export const metadata = {
   title: "Jemson Sayre - Portfolio",
   description: "",
+  icons: {
+    icon: "/images/logo-icon-dark.png",
+    shortcut: "/favicon-16x16.png",
+    "favicon-32x32": "/favicon-32x32.png",
+  }
 };
 
 export default function RootLayout({ children }) {

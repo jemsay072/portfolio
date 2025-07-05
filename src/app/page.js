@@ -31,13 +31,13 @@ export default function Home() {
       localStorage.theme = '';
     }
     
-  }, [setIsDarkMode])
+  }, [isDarkMode])
 
   return (
     <main>
-      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
+      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} data={infoList?.logo} />
       <Hero isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} data={infoList?.Hero} />
-      <About isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} data={infoList?.infoList} />
+      <About isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} data={infoList?.combinedAbout} />
       <Work isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} data={infoList?.workData} />
       <Contact isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Footer isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />

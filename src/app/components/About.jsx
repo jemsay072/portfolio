@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import user from "@/assets/images/jem.jpg";
-import { infoList } from '../model/info';
 import { motion } from "motion/react"
 
 import PropTypes from 'prop-types'
@@ -40,21 +38,21 @@ const About = ({isDarkMode, data}) => {
                     transition={{ duration: 0.6 }}
                     className='w-64 sm:w-80 rounded-3xl max-w-none'
                 >
-                    <Image src={user} alt='jem' className='w-full rounded-3xl'/>
+                    <Image src={data.src.src} alt='jem' width={data.width} height={data.height} className='w-full rounded-3xl'/>
                 </motion.div>
                 <motion.div
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
                     transition={{ duration: 0.6, delay: 0.8 }}
                     className='flex-1 '>
-                    <p className={`mb-10 mx-w-2xl ${isDarkMode ? '' : 'dark:text-white'}`}>Experienced Web Developer with 12+ years of building high-performance, user-focused websites and applications. Skilled in HTML, CSS, JavaScript, ReactJS, PHP, Laravel, Wordpress and Next.js. Adept at delivering clean, efficient solutions, integrating APIs and databases, and ensuring top-tier UX, speed, and functionality.</p>
+                    <p className={`mb-10 mx-w-2xl ${isDarkMode ? '' : 'dark:text-white'}`}>{data?.desc}</p>
                     <motion.ul 
                         initial={{opacity: 0}}
                         whileInView={{opacity: 1}}
                         transition={{ duration: 0.8, delay: 0.1 }}
                         className='grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl'
                     >
-                       {data.map(({icon, title, desc}, ind) => (
+                       {data?.info.map(({icon, title, desc}, ind) => (
                             <motion.li
                                 whileinView={{scale:1.05}}
                                 key={ind} 
@@ -72,12 +70,24 @@ const About = ({isDarkMode, data}) => {
   )
 }
 
-About.proptypes = {
-    data:PropTypes.shape({
-        desc: PropTypes.string.isRequired,
-        icon: PropTypes.arrayOf(PropTypes.string).isRequired,
-        title: PropTypes.string.isRequired
-    }).isRequired
+About.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+  data: PropTypes.shape({
+    desc: PropTypes.string.isRequired,
+    src: PropTypes.shape({
+      src: PropTypes.string.isRequired,
+      alt: PropTypes.string.isRequired,
+      width: PropTypes.number.isRequired,
+      height: PropTypes.number.isRequired
+    }).isRequired,
+    info: PropTypes.arrayOf(
+      PropTypes.shape({
+        icon: PropTypes.node.isRequired,
+        title: PropTypes.string.isRequired,
+        desc: PropTypes.string.isRequired
+      })
+    ).isRequired
+  }).isRequired
 }
 
 export default About
