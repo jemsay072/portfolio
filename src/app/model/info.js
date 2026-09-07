@@ -38,7 +38,7 @@ const workData = [
         title: 'Project Uno',
         desc: 'Built using Nextjs a modern react framework known for its speed and flexibility',
         img: projuno,
-        link: 'https://projuno.jemsonsayre.com/',
+        link: '#',
         status: 'active',
         tech : [
             'NextJs',
@@ -50,7 +50,7 @@ const workData = [
         title: 'Project Dos',
         desc: 'Built using Nextjs a modern react framework known for its speed and flexibility',
         img: projdos,
-        link: 'https://projdos.jemsonsayre.com/',
+        link: '#',
         status: 'active',
         tech : [
             'NextJs',
@@ -88,7 +88,7 @@ const infoList = [
     {
         icon: <CodeXml />,
         title: 'Tech Skills',
-        desc: 'HTML, CSS, JAVASCRIPT, REACT JS, LARAVEL, PHP, WORDPRESS, NEXT Js'
+        desc: 'HTML, CSS, JAVASCRIPT, REACT JS, LARAVEL, PHP, NEXT Js, TYPESCRIPT'
     },
     // {
     //     icon: <GraduationCap />,
@@ -98,7 +98,7 @@ const infoList = [
     {
         icon: <BriefcaseBusiness />,
         title: 'Projects',
-        desc: 'Built more than 5 projects using React JS and Next JS'
+        desc: 'Showcasing my latest work and ongoing projects, built using a mix of proven web foundations and modern frameworks.'
     },
 ]
 
@@ -109,13 +109,17 @@ const infoList = [
 // ]
 
 const combinedAbout = {
-    desc: 'Experienced Web Developer with 12+ years of building high-performance, user-focused websites and applications. Skilled in HTML, CSS, JavaScript, ReactJS, PHP, Laravel, Wordpress and Next.js. Adept at delivering clean, efficient solutions, integrating APIs and databases, and ensuring top-tier UX, speed, and functionality.',
+    desc: 'Seasoned Web Developer with 13 years of experience specializing in frontend architecture with HTML, CSS, JavaScript, and React. Actively expanding my modern workflow with TypeScript and Next.js while leveraging solid foundations in API integration, PHP, and Laravel. I combine over a decade of core web engineering with a strong drive for clean, high-performance user experiences.',
     src: pic,
     alt: 'jemson sayre',
     width: 200,
     height: 200,
     info: infoList, 
 };
+
+// Experienced Web Developer with 12+ years of building high-performance, user-focused websites and applications. Skilled in HTML, CSS, JavaScript, ReactJS, PHP, Laravel, Wordpress and Next.js. Adept at delivering clean, efficient solutions, integrating APIs and databases, and ensuring top-tier UX, speed, and functionality.
+
+ // Seasoned Web Developer with 13 years of experience crafting high-performance, user-focused applications. My expertise is deeply rooted in frontend architecture, specializing in HTML, CSS, JavaScript, and React, while actively integrating TypeScript and Next.js into my modern workflow. Adept at connecting APIs and backed by solid foundations in PHP and Laravel, I combine over a decade of core web engineering with a strong drive for modern frontend solutions.
 
 const info = {logo, Hero, workData, infoList, combinedAbout};
 export default info;

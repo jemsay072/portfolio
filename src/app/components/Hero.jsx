@@ -49,7 +49,7 @@ const Hero = ({data}) => {
               transition={{ duration: 0.6, delay: 0.3 }}
               className='flex items-end gap-2 text-xl md:text-2xl mb-3 text-white font-bold'
             >
-                H! <span>{data.name}</span> <Hand color='#ffb86a'/>
+                HI! <span>{data.name}</span> <Hand color='#ffb86a'/>
             </motion.h3>
             <motion.h1 
               initial={{y: -30, opacity: 0}}
@@ -58,26 +58,28 @@ const Hero = ({data}) => {
               className='text-3xl sm:text-6xl lg:text-[66px]'>
                 <span style={positionStyle}>{data.position}</span> Developer
             </motion.h1>
-            <motion.p 
+            <motion.div 
               initial={{opacity: 0}}
               whileInView={{opacity: 1}}
               transition={{ duration: 0.6, delay: 0.7 }}
               className='max-w-2xl mx-auto animated-text-container text-gray-200'
             >
-              -- I am a  <AnimatePresence mode="wait">
-                <motion.span
-                  key={currentText} // Key is crucial for AnimatePresence to detect changes
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
-                  className="animated-text"
-                  style={animatedTextStyle}
-                >
-                  {animatedText} 
-                </motion.span>
-              </AnimatePresence> Developer
-            </motion.p>
+              <span>-- I am a </span>
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={currentText} // Key is crucial for AnimatePresence to detect changes
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="animated-text"
+                    style={animatedTextStyle}
+                  >
+                    {animatedText} 
+                  </motion.span>
+                </AnimatePresence>
+              <span> Developer</span>
+            </motion.div>
         </div>
     </section>
   )

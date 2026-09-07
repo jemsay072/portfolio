@@ -60,13 +60,13 @@ const Contact = ({isDarkMode}) => {
                     initial={{scale: 0}}
                     whileInView={{ scale: 1}}
                     transition={{ delay: 0.6 }}
-                    href="https://github.com/jemsay07" 
+                    href="https://github.com/jemsay072" 
                     className={`flex justify-center gap-1 border-2 rounded-full p-2 ${isDarkMode? 'text-stone-800 border-stone-800 hover:bg-stone-800 hover:text-white' : 'dark:text-stone-50 dark:border-stone-50 dark:hover:bg-white dark:hover:text-stone-800'} duration-500`}
                     target='_blank' rel="noopener noreferrer"
                 >
                     <GithubIcon />
                 </motion.a>
-                <motion.a 
+                {/* <motion.a 
                     initial={{scale: 0}}
                     whileInView={{ scale: 1}}
                     transition={{ delay: 0.7 }}
@@ -74,7 +74,7 @@ const Contact = ({isDarkMode}) => {
                     <button className='flex justify-center gap-1 text-orange-500 rounded-full p-2 border-2 border-orange-500 hover:bg-orange-600 hover:text-white duration-500 cursor-pointer'>
                         <Mail />
                     </button>
-                </motion.a>
+                </motion.a> */}
             </div>
         </div>
     </motion.section>
