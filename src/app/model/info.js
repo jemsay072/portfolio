@@ -3,6 +3,7 @@ import pic from "@/assets/images/jem.jpg";
 import profile from "@/assets/images/profile-w.jpg";
 import projuno from "@/assets/images/projUno.png";
 import projdos from "@/assets/images/projDos.png";
+import sureLimsumSS from "@/assets/images/surelipsum.jpg";
 import logoImg from "@/assets/images/logo-light.png";
 
 const logo = {
@@ -35,11 +36,23 @@ const Hero = {
 
 const workData = [
     {
+        title: "SureLipsum",
+        desc: "Showcasing my latest work and ongoing projects, built using a mix of proven web foundations and modern frameworks.",
+        img: sureLimsumSS,
+        link: "https://surelipsum.vercel.app/",
+        status: "active",
+        tech: [
+            'NextJs',
+            'Tailwind',
+            'JavaScript'
+        ],
+    },
+    {
         title: 'Project Uno',
         desc: 'Built using Nextjs a modern react framework known for its speed and flexibility',
         img: projuno,
         link: '#',
-        status: 'active',
+        status: 'coming_soon',
         tech : [
             'NextJs',
             'Mui'
@@ -51,19 +64,11 @@ const workData = [
         desc: 'Built using Nextjs a modern react framework known for its speed and flexibility',
         img: projdos,
         link: '#',
-        status: 'active',
+        status: 'coming_soon',
         tech : [
             'NextJs',
             'Mui'
         ]
-    },
-    {
-        title: 'Frontend project',
-        desc: 'Web Design',
-        img: profile,
-        link: '',
-        status: 'inprogress',
-        tech : [ ]
     },
     {
         title: 'Frontend project',
