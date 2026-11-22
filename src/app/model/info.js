@@ -4,6 +4,9 @@ import profile from "@/assets/images/profile-w.jpg";
 import projuno from "@/assets/images/projUno.png";
 import projdos from "@/assets/images/projDos.png";
 import sureLimsumSS from "@/assets/images/surelipsum.jpg";
+import carepointImg from "@/assets/images/screenshot-carepoint-clinic.png";
+import healthpulseImg from "@/assets/images/screenshot-healthpulse-insights.png";
+import medstaffImg from "@/assets/images/screenshot-medstaff-pro.png";
 import logoImg from "@/assets/images/logo-light.png";
 
 const logo = {
@@ -48,6 +51,47 @@ const workData = [
         ],
     },
     {
+        title: 'MedStaff Pro',
+        desc: 'Custom WordPress healthcare staffing and job board theme featuring custom post types, specialty filtering, and SMTP-backed application workflows. (Demo concept with placeholder content)',
+        img: medstaffImg,
+        link: 'https://medstaff-demo.freedev.app/',
+        status: 'active',
+        tech: [
+            'WordPress',
+            'PHP',
+            'Tailwind CSS',
+            'ACF'
+        ]
+    },
+    {
+        title: 'CarePoint Clinic',
+        desc: 'Custom WordPress multi-specialty clinic theme with dynamic doctor schedules, department filtering, service directories, and an AJAX appointment booking system. (Demo concept with placeholder content)',
+        img: carepointImg,
+        link: 'https://carepoint-demo.freedev.app/',
+        status: 'active',
+        tech: [
+            'WordPress',
+            'PHP',
+            'AJAX',
+            'Tailwind CSS',
+            'ACF'
+        ]
+    },
+    {
+        title: 'HealthPulse Insights',
+        desc: 'Modern editorial healthcare publication and resource hub built on WordPress with zero-reload AJAX live search, category filtering, and newsletter signup. (Demo concept with placeholder content)',
+        img: healthpulseImg,
+        link: 'https://healthpulse-demo.freedev.app/',
+        status: 'active',
+        tech: [
+            'WordPress',
+            'PHP',
+            'JavaScript (AJAX)',
+            'Tailwind CSS',
+            'ACF'
+        ]
+    },
+    {
         title: 'Project Uno',
         desc: 'Built using Nextjs a modern react framework known for its speed and flexibility',
         img: projuno,
@@ -79,6 +123,7 @@ const workData = [
         tech : [ ]
     }
 ]
+
 
 // const projData = [
 //     {

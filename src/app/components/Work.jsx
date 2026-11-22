@@ -40,14 +40,15 @@ const Work = ({isDarkMode, data}) => {
                         className='aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group'
                         style={{backgroundImage: `url(${img.src})`}}>
                         {status === 'active' ? (
-                            <div className={`flex flex-col absolute invisible group-hover:visible group-active:visible w-full h-full text-center justify-center items-center p-6 rounded-lg bg-sky-200 gap-4`}>
-                                <h3 className='text-2xl font-semibold text-gray-700'>{title}</h3>
-                                <p className='text-gray-400 text-sm'>{desc}</p>
-                                <div className='flex flex-wrap justify-center mt-2'>
+                            <div className='flex flex-col absolute invisible group-hover:visible group-active:visible w-full h-full text-center justify-center items-center p-6 rounded-lg bg-sky-200 gap-4'>
+                                <h3 className='text-2xl font-semibold text-gray-800'>{title}</h3>
+                                <p className='text-gray-600 text-sm'>{desc}</p>
+                                <div className='flex flex-wrap justify-center gap-2 mt-2'>
                                     <WorkBadge data={tech}/>
                                 </div>
-                                <a href={link} target='_blank' rel="noopener noreferrer" className='text-blue-500 border py-1 px-8 rounded-full  hover:bg-sky-500 hover:border-sky-500 hover:text-white duration-100'>View Project</a>
+                                <a href={link} target='_blank' rel="noopener noreferrer" className='text-blue-600 border border-blue-500 py-1 px-8 rounded-full hover:bg-sky-500 hover:border-sky-500 hover:text-white duration-100'>View Project</a>
                             </div>
+
                         ) : (
                             <div className='flex flex-col absolute w-full h-full text-center justify-center items-center p-10 rounded-lg bg-gray-600 opacity-70'>
                                 <span className='border rounded-lg p-1 transform rotate-3 uppercase text-2xl text-red-300'>Coming soon</span>
